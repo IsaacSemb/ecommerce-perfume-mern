@@ -1,0 +1,26 @@
+  [
+    {
+      "categoryName": "Men's Collection",
+      "categoryDescription": "Discover the perfect blend of style and sophistication.",
+      "category":"male",
+      "localFileName":"men_category.jpg"
+    },
+    {
+      "categoryName": "Women's Collection",
+      "categoryDescription": "Embrace elegance and grace with our curated selection.",
+      "category":"female",
+      "localFileName":"women_category.jpg"
+    },
+    {
+      "categoryName": "New Arrivals",
+      "categoryDescription": "Stay ahead of the trends with our latest additions.",
+      "category":"new-arrival",
+      "localFileName":"new_arrivals_category.png"
+    },
+    {
+      "categoryName": "Best Sellers",
+      "categoryDescription": "Discover our most popular and beloved fragrances.",
+      "category":"best-seller",
+      "localFileName":"best_sellers_category.png"
+    }
+  ]

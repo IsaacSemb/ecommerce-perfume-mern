@@ -1,0 +1,24 @@
+[{
+  "categoryName": "Men's Collection",
+  "categoryDescription": "Discover the perfect blend of style and sophistication.",
+  "category": "men_category",
+  "localFileName": "men_category.jpg"
+},
+{
+  "categoryName": "Women's Collection",
+  "categoryDescription": "Embrace elegance and grace with our curated selection.",
+  "category": "women_category",
+  "localFileName": "women_category.jpg"
+},
+{
+  "categoryName": "Kids' Perfumes",
+  "categoryDescription": "Dive into a world of fun and adventure with our Kid's Collection!",
+  "category": "kids_category",
+  "localFileName": "kids_category.jpeg"
+},
+{
+  "categoryName": "Deodrants' Collection",
+  "categoryDescription": "Discover our most popular and beloved deoadrants.",
+  "category": "deodrants_category",
+  "localFileName": "deodrants.jpg"
+}]

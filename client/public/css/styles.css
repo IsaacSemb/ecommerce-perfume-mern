@@ -1,0 +1,1382 @@
+/* theme control */
+@import url("./colors.css");
+
+/* all elements */
+* {
+  border: 0px solid;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* the root */
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+/* the entire document */
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------------------------------------- GENERAL FUNCTIONALITY CSS ---------------------------- */
+
+/* whole header, brandtitle, nav bar */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px;
+  margin-bottom: 2px;
+}
+
+/* the picture between the company words */
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+/* the whole word including the picture */
+.brand {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  align-self: baseline;
+  padding-left: 1.5rem;
+}
+
+/* h1 heading semb fragrances */
+.brand-words {
+  font-size: 2rem;
+}
+
+/* slogan below the heading */
+.slogan {
+  font-size: 1.52rem;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* title and slogan combined */
+.brand-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0px;
+}
+
+/* navbar for links, ghost spacer and icons */
+
+.nav-links {
+  /* display: flex; */
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-links {
+  border-radius: 2px;
+}
+
+/* shopping cart and user container */
+.nav-icons {
+  /* border: solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #8f82708a; /* doesnt do anything */
+}
+
+.login-logout {
+  /* border: solid; */
+  font-size: 1.3rem;
+  color: #ededed;
+  padding: 0px 0.5rem;
+  margin: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* shopping cart and user icon images */
+.nav-icons a img {
+  /* border: solid; */
+  height: 80%;
+  width: 2.5rem;
+}
+
+.user-icon {
+  display: flex;
+  margin: 0px 0.9rem;
+}
+.user-icon img {
+  padding: 0;
+  margin: 0;
+}
+
+.user-icon img:hover {
+  border-radius: 15px;
+}
+
+.cart-icon1 {
+  display: flex;
+  margin: 0px 0.9rem;
+}
+
+.cart-icon:hover {
+  border-radius: 15px;
+}
+.cart-icon {
+  /* border: solid; */
+  margin: 0px 0.9rem;
+}
+
+/* nav bar for links only  */
+.header-section .links {
+  /* border: solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 40%;
+}
+
+/* the real links in the nav links  */
+.header-section .links a {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  height: 100%;
+  padding: 0.5rem 3%;
+  /* color: black;       transfered to theme controls */
+
+  /* border: 1px solid; */
+  flex: 1;
+  /* to make them equal size so when you hove on them the are equal*/
+}
+
+/* ---------- THE DROPDOWN SECTION ---------------  */
+
+/* bootstrap button */
+
+/* In your CSS file (e.g., styles.css) */
+.custom-dropdown-toggle {
+  background-color: #27361f;
+  /* background-color: #808F82; */
+
+  color: #ededed; /* White text */
+  border: none; /* Remove border */
+  font-size: 0.8rem; /* Increase the size for the burger icon */
+  padding: 0.5rem 1rem; /* Adjust padding */
+  border-radius: 5px; /* Rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Pointer cursor */
+}
+
+.custom-dropdown-toggle:hover {
+  background-color: #afa08c; /* Slightly lighter gray on hover */
+  color: #27361f; /* Change text color on hover */
+}
+
+.custom-dropdown-toggle:focus {
+  background-color: #afa08c; /* Change text color on hover */
+}
+
+/* the drop down at big screen should be visible */
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  right: 2%;
+  align-self: center;
+}
+
+/* the drop button  */
+.nav-dropdown .drop-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+/* the box that drops down in the dropdown */
+.nav-dropdown .dropdown-menu {
+  width: 40vw;
+}
+
+/* every link in the list that drops down ( the ords hence a tag ) */
+
+.nav-dropdown .dropdown-item {
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.2rem 1.2rem;
+}
+
+/* AT PHONE SIZES (the header) */
+@media (max-width: 850px) {
+  html {
+    font-size: 15px;
+  }
+
+  .brand {
+    gap: 0;
+    align-self: center;
+  }
+  .brand * {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  /* ALL LINKS DISAPEAR TO MAKE WAY FOR THE BURGER */
+  .header-section .links {
+    display: none;
+  }
+
+  /* navbar for links, ghost spacer and icons */
+  .nav-links {
+    display: none;
+  }
+
+  .search-bar-container {
+    width: 40%;
+  }
+
+  .search-bar {
+    height: 35px;
+  }
+
+  /* shopping cart and user container REDUCE SPACING */
+  .nav-icons {
+    gap: 0.5rem;
+    justify-content: left;
+  }
+
+  /* the shopping cart and user icon at phone screen */
+  .nav-icons a img {
+    margin: 0px 0.5rem;
+    /* the space between them*/
+  }
+
+  /* to make the burger appear */
+  .nav-dropdown {
+    display: block;
+  }
+}
+
+/*  ---------- categories css ---------- */
+
+/* each card is bootstrap component */
+
+.perfume-card {
+  background-color: #27361f;
+  border: none;
+}
+
+.perfume-card:hover {
+  background-color: #afa08c;
+}
+
+.perfume-card:active {
+  background-color: #afa08c !important;
+}
+
+
+/* the title of this section */
+
+/* the whole container that has the cards */
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding: 0px 5%;
+}
+
+/* the top categories title */
+.categories-title {
+  border-bottom: 1px solid;
+  font-size: 2.5rem;
+  align-self: baseline;
+  width: 100%;
+}
+
+.categories .category-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* see more button  */
+.categories .see-more a {
+  text-decoration: none;
+}
+
+/* when you hover on see more */
+.categories .see-more a:hover {
+  text-decoration: underline;
+}
+
+/* the whole card in the men section only */
+.men .card {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+}
+
+/* card body inside men categories */
+.men .card .card-body {
+  padding: 05px;
+}
+
+/* evrything inside te card body ie h5 and paragraph */
+.men .card .card-body > * {
+  margin: 6px 0px;
+}
+
+/* h5 for all cards */
+.men .card .card-body > h5 {
+  width: 90%;
+  border-bottom: 1px solid;
+}
+
+/* card body paragragh */
+
+/* the paragraph in the cards of the men category */
+.men .card .card-body p {
+  width: 100%;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 0.7rem;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.scroll-wrapper:hover .scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  transition: background-color 150ms ease-in-out;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.scroll-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.scroll-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+
+/*--------------------------------------------------------------------------- PERFUME CARD CSS */
+
+
+/* every individual card */
+.card { 
+  width: 18rem;
+  height: 25rem;
+  padding: 2px;
+
+}
+
+/* all cards when you hover on them */
+.card:hover {
+  box-shadow: 2px 2px 2px rgba(175, 160, 140, 0.5);
+  transition:  box-shadow 150ms ease-in-out;
+
+}
+
+/* the container that has the image tag IN THE CARDS */
+.card-img-container {
+
+  width: 100%;
+  height: 19rem;
+  overflow: hidden;
+  position: relative;
+
+}
+
+/* the image itself */
+.card-img-top , .prod-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+/* when you hover over card image */
+.card-img-top:hover {
+  transform: translate(-50%, -50%) scale(1.2) rotate(10deg);
+  transition: transform 0.3s ease;
+}
+
+/* add to cart and price ---- buy item and price  */ 
+.add-to-cart {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/* the price of each item */
+.add-to-cart .price {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding: 0px 1rem;
+}
+
+
+
+
+
+
+
+/* -------------------------------   A SINGLE PRODUCT   ------------------------------------- */
+
+/* the first section of the page */
+
+.single-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+  height: 75vh;
+}
+
+/* product image alone */
+
+.single-product .card-img-container {
+  width: 30%;
+  height: 80%;
+
+  width: 300px;
+  height: 400px;
+
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* product details alone */
+
+.single-product .pdt-details {
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem 0px;
+  width: 40%;
+}
+
+/* the real image */
+.single-product .card-img-container img {
+  width: 100%;
+  height: auto;
+
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+/* product name */
+.single-product .pdt-details .product-name {
+  border-bottom: 1px solid #d3d3d3;
+  width: 70%;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.single-product .price h3 {
+  border-bottom: 1px solid #d3d3d3;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+/*THE QUANTITY SELECTOR AND BELOW*/
+
+/* quatity machine and add button */
+.single-product .add-to-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+}
+
+/* the whole quantity selector device */
+.single-product .add-to-cart .quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* plus and minus buttons */
+.single-product .add-to-cart .btn-control {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.single-product .add-to-cart .quantity-selector #quantity {
+  width: 4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  border: 1px solid;
+}
+
+.single-product .add-to-cart .quantity-selector .quantity-label {
+  width: 4rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Hide arrows in input[type="number"] for Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide arrows in input[type="number"] for Firefox */
+input[type="number"] {
+  appearance: textfield; /* Firefox */
+}
+
+@media (max-width: 850px) {
+  /* the first section with the purchase */
+
+  .single-product {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* product details */
+  .single-product .pdt-details {
+    width: 100%;
+  }
+
+  /* end of media query */
+}
+
+/*  --------- the about page ---------- */
+
+/* the entire page after the navbar */
+.about-page {
+  padding: 0px 8%;
+}
+
+/*HERO PART*/
+
+/* the entire hero section , mantra, logo, parag, button*/
+.about-hero {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* the entire hero section , mantra, logo, parag, button*/
+.about-hero > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d3d3d3;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 80%;
+}
+
+/* logo */
+.about-hero img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.about-page .text-center h1 {
+  font-size: 2rem;
+}
+
+/* mantra description */
+.lead{
+    font-size: 1.2rem;
+}
+
+/*ABOUT FEATURES */
+
+.feature-and-icon > * {
+  padding: 0;
+  margin: 0;
+}
+
+/* feature and icon */
+.feature-and-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* image in feature*/
+.feature-and-icon img {
+  width: 2.5rem;
+  height: auto;
+  border-radius: 30%;
+  background-color: #d3d3d3;
+}
+
+/* what are we about*/
+.our-features > h2 {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+/* each feature title and description*/
+.feature {
+  margin: 0px;
+  padding-left: 2rem;
+}
+
+/* the paragraphs in the feature */
+.feature p {
+  width: 100%;
+}
+
+/* trust icon */
+.trust-feature img {
+  background-color: lightblue;
+}
+
+/* price icon*/
+.price-feature img {
+  background-color: lightgreen;
+}
+
+/* quality icon */
+.quality-feature img {
+  background-color: rgba(255, 217, 0, 0.528); /* lighter shade of gold */
+}
+
+/*  ------------------------------- contact us page --------------------- */
+
+/*while contact page*/
+.contact-page {
+  padding: 2rem 0px;
+}
+
+/* contact us and the words below it (its container) */
+.contact-intro-section {
+  display: flex;
+  justify-content: center;
+}
+
+/* contact us and the words below it */
+.contact-intro {
+  border-bottom: 1px solid #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+/* the find us and form */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0px;
+  gap: 1rem;
+}
+
+/* inside the contact forms */
+.contact-cards > * {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  width: 40%;
+}
+
+/* form container spacing */
+.contact-cards form {
+  gap: 4px;
+}
+
+/* submit button */
+.contact-cards form button {
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 50%;
+  align-self: center;
+  /* background-color: grey;  in theme control */
+  /* color: red;  in theme control */
+  pointer-events: none;
+}
+
+/* find us section all lines */
+.contact-cards .store-info > * {
+  width: 100%;
+}
+
+/* white areas in contact form */
+.contact-page input,
+.contact-page textarea {
+  border-radius: 6px;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid #d3d3d3;
+}
+
+/* words in contact form */
+.contact-page label {
+  padding-left: 0.3rem;
+  padding-top: 0.4rem;
+}
+
+/* social media icons container */
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials p {
+  text-align: center;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.social-icon img {
+  width: 2rem;
+  height: auto;
+}
+
+.social-icon a {
+  text-decoration: none;
+  color: grey;
+}
+
+.social-icon a:hover {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0px;
+  }
+
+  .contact-cards form,
+  .contact-cards div {
+    width: 70%;
+  }
+}
+
+/* LOGIN PAGE */
+
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px); /* This applies the blur to the background */
+  z-index: 1000;
+}
+
+.login-card {
+  background-color: #ededed;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  width: 500px;
+}
+
+.login-card h2 {
+  margin-bottom: 1rem;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  margin-bottom: 0.5rem;
+}
+
+.login-card input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* border: solid; */
+}
+
+.login-card button {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 40%;
+  align-self: center;
+  background-color: #27361f;
+}
+
+.login-card button:hover {
+  /* button colors*/
+  background-color: #27361f;
+
+  /* button colors*/
+  background-color: #afa08c;
+
+  /* word colors */
+  color: #ededed;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-modal input:focus {
+  outline: 1px solid #808f82;
+}
+
+.login-modal p {
+  text-align: center;
+  width: 100%;
+  color: #27361f;
+}
+
+.login-modal p:hover {
+  text-decoration: underline;
+}
+
+/* ------------- CART PAGE---------------------- */
+
+/* src/components/Cart.css */
+
+.cart-container {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  background-color: #fcf9f9;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+h1 {
+  text-align: center;
+  color: #27361f;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.cart-item-details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.cart-item-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* whole dive with the quantity change on cart page */
+.cart-item-quantity {
+  margin: 5px 0;
+  color: #666;
+}
+
+.cart-quantity {
+  font-size: 1.4rem;
+  pointer-events: none;
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cart-quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  /* background-color: red; */
+}
+
+.cart-quantity-controls .cart-control {
+  background-color: #27361f;
+  border: none;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+  transition: opacity 300ms ease-in-out;
+}
+
+.cart-quantity-controls button:hover {
+  background-color: #808f82;
+  opacity: 0.8;
+}
+
+.cart-quantity-controls button:active {
+  background-color: #afa08c !important;
+}
+
+.update-cart-button {
+  background-color: #27361f;
+  color: #ededed;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 0px 20px;
+  border-radius: 0.7rem;
+}
+
+.delete-cart-item {
+  color: #ededed;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  border-radius: 0.7rem;
+  background-color: #808f82;
+  /* opacity: 0.4; */
+}
+
+.delete-cart-item img,
+.delete-cart-item svg {
+  height: 1.3rem;
+  width: auto;
+  background-color: inherit;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  color: #333;
+}
+
+.total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.checkout-btn {
+  padding: 10px 20px;
+  background-color: #27361f;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #afa08c;
+}
+
+.empty-cart {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+/* payment page------------------------------------------------------------------ */
+
+.payment-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.payment-page-container .title {
+  text-align: center;
+  color: #27361f;
+  
+}
+
+.payment-page {
+  width: 450px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  pointer-events: none;
+  user-select: none;
+}
+
+.payment-page h2 {
+  text-align: center;
+  margin: 20px auto;
+  color: #27361f;
+}
+
+.payment-page button{
+  pointer-events: none;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #27361f;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #808f82;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  border-color: #afa08c;
+  outline: none;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #27361f;
+  color: #ededed;
+  font-size: 18px;
+  width: 300px;
+  margin: 0px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #afa08c;
+  color: #27361f;
+}
+
+/* order details page ------------------------------------  */
+
+.order-receipt {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 80vw;
+  margin: auto;
+}
+
+.receipt-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #27361f;
+}
+
+.receipt-info {
+  margin-bottom: 20px;
+}
+
+.receipt-items-title {
+  margin-bottom: 10px;
+}
+
+.receipt-items-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.receipt-items-table th,
+.receipt-items-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.receipt-items-table th {
+  background-color: #f2f2f2;
+}
+
+.receipt-items-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.receipt-items-table tr:hover {
+  background-color: #ddd;
+}
+
+.receipt-total {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+
+/* order log orders  */
+
+.order-link{
+  color: #27361f !important;
+  height: 100%;
+  width: 100%;
+}
+
+
+.order-link:hover {
+  color: #AFA08C !important;
+}
+
+.no-orders-found{
+  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.no-orders-found > p {
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  color: #333; 
+  text-align: center; 
+  pointer-events: none;
+  user-select: none;
+}
+
+
+
+
+
+/* -------------- footer css ----------------- */
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer {
+  border-top: 1px solid #d3d3d3;
+  margin-top: 10px;
+  padding: 1rem 2rem;
+  width: 95%;
+  /* flex-shrink: 0; */
+  /* flex-grow: 0 ; */
+}
+
+footer .logo {
+  height: 1.7rem;
+  width: auto;
+  border-radius: 50%;
+}
+
+footer > a {
+  visibility: hidden;
+}
+
+/* -------------------------- */
+
+/* General styles to ensure the layout behaves as expected */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app takes the full viewport height */
+  box-sizing: border-box;
+}
+
+.content {
+  flex-grow: 1; /* This will make sure the content area expands and pushes the footer down */
+  padding: 20px; /* Add padding for spacing */
+  overflow: auto; /* Ensure the content area can scroll if it overflows */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer {
+  border-top: 1px solid #d3d3d3;
+  padding: 1rem 2rem;
+  width: 95%;
+  flex-shrink: 0; /* Prevents footer from shrinking */
+}
+
+footer .logo {
+  height: 1.7rem;
+  width: auto;
+  border-radius: 50%;
+}
+
+footer > a {
+  visibility: hidden;
+}
+
+/* App.css or your global CSS file */
+
+/* Ensure body and html take up full height */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Container for the entire app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Ensure the main content area grows and pushes the footer down */
+.content {
+  flex: 1; /* Flex-grow allows content area to expand */
+  padding: 20px; /* Padding for spacing */
+}
+
+/* Ensure footer appears at the bottom of the page */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure the header and footer are fixed at the top and bottom */
+header {
+  background-color: #f8f8f8; /* Background color of the header */
+  padding: 1rem 2rem; /* Add padding as needed */
+  border-bottom: 1px solid #d3d3d3; /* Optional border */
+  width: 100%; /* Full width */
+}
+
+/* Main content area that grows and scrolls */
+main {
+  flex: 1; /* Flex-grow to allow the main content area to expand */
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in total width/height */
+  overflow: auto; /* Ensure content can scroll if necessary */
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Earth Salt",
+    "description": "deod1",
+    "category": "deodrant_category",
+    "localFileName": "deodrant1.png",
+    "gender": null,
+    "price": 10
+  },
+  {
+    "name": "Aloe",
+    "description": "deod2",
+    "category": "deodrant_category",
+    "localFileName": "deodrant2.png",
+    "gender": null,
+    "price": 10
+  },
+  {
+    "name": "frozen",
+    "description": "kiddd1",
+    "category": "kid_category",
+    "localFileName": "kid1.png",
+    "gender": null,
+    "price": 99.0
+  },
+  {
+    "name": "unicorn",
+    "description": "kidd2",
+    "category": "kid_category",
+    "localFileName": "kid2.png",
+    "gender": null,
+    "price": 99.0
+  },
+  {
+    "name": "naturaverde",
+    "description": "kiddd3",
+    "category": "kid_category",
+    "localFileName": "kid3.png",
+    "gender": null,
+    "price": 99.0
+  },
+
+  {
+    "name": "ancestry",
+    "description": "wwwww111.",
+    "category": "women_category",
+    "localFileName": "women1.png",
+    "gender": "female",
+    "price": 89.99
+  },
+
+  {
+    "name": "opium",
+    "description": "wwwww2.",
+    "category": "women_category",
+    "localFileName": "women2.png",
+    "gender": "female",
+    "price": 89.99
+  }
+]

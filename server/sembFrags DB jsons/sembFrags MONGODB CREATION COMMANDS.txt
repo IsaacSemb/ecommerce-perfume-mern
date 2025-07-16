@@ -1,0 +1,333 @@
+// To create the entire database,
+
+// Run commands below in a mongo shell
+
+// --------------------------------------------------------------------------------------------
+
+// 1. CREATE THE ENTIRE DATABASE
+
+use sembFrags;
+
+// 2. CREATE A USERS COLLECTION
+
+db.createCollection("users");
+
+// 2.1 POPULATE THE USER COLLECTION WITH ONE USER
+// point to note, this can be skipped and done in the react app by signing up a new User.
+
+db.users.insertOne({
+  email: "johndoe@mail.com",
+  password: "$2b$12$Nf3iPWbJbSE/Tvlr5rc07.cdDrZ4/5LAzVn6sJUoWfm35EKParpV6",
+  userName: "John Doe",
+  postalCode: "AA11",
+  address: "123 street",
+});
+
+// THE REMAINING STEPS ARE CRITICAL -------------------------------------------------------
+
+// 3. CREATE A CATEGORIES COLLECTION AND POPULATE IT
+
+db.createCollection("categories");
+
+// 3.1 POPULATE THE CATEGORIES COLLECTION
+
+db.categories.insertMany([
+  {
+    categoryName: "Men's Collection",
+    categoryDescription:
+      "Discover the perfect blend of style and sophistication.",
+    category: "men_category",
+    localFileName: "men_category.jpg",
+  },
+  {
+    categoryName: "Women's Collection",
+    categoryDescription:
+      "Embrace elegance and grace with our curated selection.",
+    category: "women_category",
+    localFileName: "women_category.jpg",
+  },
+  {
+    categoryName: "Kids' Perfumes",
+    categoryDescription:
+      "Dive into a world of fun and adventure with our Kid's Collection!",
+    category: "kids_category",
+    localFileName: "kids_category.jpeg",
+  },
+  {
+    categoryName: "Deodrants' Collection",
+    categoryDescription: "Discover our most popular and beloved deoadrants.",
+    category: "deodrants_category",
+    localFileName: "deodrants.jpg",
+  },
+]);
+
+// 4. CREATE A PRODUCTS COLLECTION AND POPULATE IT
+
+db.createCollection("products");
+
+// 4.1 POPULATE THE PRODUCTS COLLECTION
+
+db.products.insertMany([
+  {
+    name: "Molton Brown",
+    description:
+      "Energizing blend of citrus fruits, perfect for a fresh start to your day.",
+    category: "men_category",
+    localFileName: "men1.png",
+    gender: "male",
+    price: 54.99,
+  },
+  {
+    name: "Hugo Boss Elixir-Parfum",
+    description:
+      "Refreshing like a breeze from the sea, with notes of citrus and marine.",
+    category: "men_category",
+    localFileName: "men2.png",
+    gender: "male",
+    price: 64.5,
+  },
+  {
+    name: "Xerloff",
+    description:
+      "Luxurious scent of velvety roses with hints of amber and vanilla.",
+    category: "men_category",
+    localFileName: "men3.png",
+    gender: "male",
+    price: 99,
+  },
+  {
+    name: "Tom Ford Ombre-leather",
+    description: "A mysterious blend of orchid and musk, perfect for evenings.",
+    category: "men_category",
+    localFileName: "men4.jpg",
+    gender: "male",
+    price: 89.99,
+  },
+  {
+    name: "D&G: the only One",
+    description:
+      "Dive into a fantasy enriched with hints of lavender and sage.",
+    category: "men_category",
+    localFileName: "men5.jpg",
+    gender: "male",
+    price: 75.25,
+  },
+  {
+    name: "Chanel Bleu de Chanel",
+    description:
+      "A woody aromatic fragrance for the man who defies convention.",
+    category: "men_category",
+    localFileName: "men7.jpg",
+    gender: "male",
+    price: 85.99,
+  },
+  {
+    name: "Dior Sauvage",
+    description: "A radically fresh composition, raw and noble all at once.",
+    category: "men_category",
+    localFileName: "men8.jpeg",
+    gender: "male",
+    price: 92.5,
+  },
+  {
+    name: "Armani Code Profumo",
+    description: "An intense, long-lasting and captivating fragrance for men.",
+    category: "men_category",
+    localFileName: "men9.jpg",
+    gender: "male",
+    price: 79.95,
+  },
+  {
+    name: "YSL La Nuit de l'Homme",
+    description: "A fragrance full of contrasts, deep and mysterious.",
+    category: "men_category",
+    localFileName: "men10.jpg",
+    gender: "male",
+    price: 73,
+  },
+  {
+    name: "Earth Salt",
+    description:
+      "Natural, mineral-rich deodorant for a fresh, all-day feeling.",
+    category: "deodrants_category",
+    localFileName: "deodrant1.png",
+    gender: null,
+    price: 12.5,
+  },
+  {
+    name: "Aloe Natural",
+    description:
+      "Soothing aloe deodorant that keeps you fresh and comfortable.",
+    category: "deodrants_category",
+    localFileName: "deodrant2.png",
+    gender: null,
+    price: 10.75,
+  },
+  {
+    name: "Rose & Geranium",
+    description:
+      "A fresh, long-lasting deodorant. Perfect for daily protection.",
+    gender: null,
+    category: "deodrants_category",
+    price: 6.97,
+    localFileName: "deodrant3.png",
+  },
+  {
+    name: "Native Coconut & Vanilla",
+    description:
+      "A popular choice for its natural ingredients and sweet, tropical scent.",
+    gender: null,
+    category: "deodrants_category",
+    price: 11.97,
+    localFileName: "deodrant4.png",
+  },
+  {
+    name: "Dove Advanced Care",
+    description: "Provides 48-hour protection with a moisturizing formula.",
+    gender: null,
+    category: "deodrants_category",
+    price: 6.88,
+    localFileName: "deodrant5.png",
+  },
+  {
+    name: "Lume - Lavender Sage",
+    description: "A versatile deodorant designed for the entire body.",
+    gender: null,
+    category: "deodrants_category",
+    price: 17.99,
+    localFileName: "deodrant6.png",
+  },
+  {
+    name: "Schmidt Charcoal",
+    description: "Natural deodorant with mineral-derived ingredients.",
+    gender: null,
+    category: "deodrants_category",
+    price: 8.99,
+    localFileName: "deodrant7.png",
+  },
+  {
+    name: "Frozen Wonder",
+    description: "Fun, vibrant kids' deodorant with a cool, fresh scent.",
+    category: "kids_category",
+    localFileName: "kid1.png",
+    gender: null,
+    price: 7,
+  },
+  {
+    name: "Unicorn Princess",
+    description: "Magical kids' deodorant with a whimsical, sweet fragrance.",
+    category: "kids_category",
+    localFileName: "kid2.png",
+    gender: null,
+    price: 9.5,
+  },
+  {
+    name: "Natura Verde",
+    description: "Eco-friendly kids' deodorant with a green, refreshing scent.",
+    category: "kids_category",
+    localFileName: "kid3.png",
+    gender: null,
+    price: 13.5,
+  },
+  {
+    name: "Tom Maine Wicked Cool",
+    description:
+      "Natural deodorant with no aluminum, artificial fragrances, or preservatives.",
+    category: "kids_category",
+    price: 5.39,
+    gender: null,
+    localFileName: "kid4.png",
+  },
+  {
+    name: "Fresh Monster",
+    description: "Safe, non-toxic deodorant made with plant-based ingredients.",
+    category: "kids_category",
+    price: 6.99,
+    gender: null,
+    localFileName: "kid5.png",
+  },
+  {
+    name: "Native Cotton & Lily",
+    description: "Made with natural ingredients. A fun scent for kids.",
+    category: "kids_category",
+    price: 8.99,
+    gender: null,
+    localFileName: "kid6.png",
+  },
+  {
+    name: "Natural Fresh Citrus",
+    description:
+      "Vegan and cruelty-free, this deodorant is free from phthalates",
+    category: "kids_category",
+    price: 5.99,
+    gender: null,
+    localFileName: "kid7.png",
+  },
+  {
+    name: "SmartyPits Kids Deodorant",
+    description: "Aluminum-free deodorant with a fun, kid-friendly scent.",
+    category: "kids_category",
+    price: 6.95,
+    gender: null,
+    localFileName: "kid8.png",
+  },
+  {
+    name: "Ancestry",
+    description: "Elegant women's fragrance with a rich, sophisticated aroma.",
+    category: "women_category",
+    localFileName: "women1.png",
+    gender: "female",
+    price: 54,
+  },
+  {
+    name: "Opium",
+    description:
+      "Bold women's perfume with a deep, alluring scent for a lasting impression.",
+    category: "women_category",
+    localFileName: "women2.png",
+    gender: "female",
+    price: 76.95,
+  },
+  {
+    name: "Valentino",
+    description: "A modern scent with notes of jasmine and bourbon.",
+    category: "women_category",
+    gender: "women_category",
+    price: 108,
+    localFileName: "women3.png",
+  },
+  {
+    name: "Yves Saint Laurent",
+    description: "A bold floral fragrance with notes of lavender.",
+    category: "women_category",
+    gender: "women_category",
+    price: 130,
+    localFileName: "women4.png",
+  },
+  {
+    name: "Marc Jacobs Daisy",
+    description:
+      "A playful and fruity floral fragrance. Made from summer daisies",
+    category: "women_category",
+    gender: "women_category",
+    price: 104,
+    localFileName: "women5.png",
+  },
+  {
+    name: "Lancôme La Vie Est Belle",
+    description: "A sweet and elegant fragrance with notes of iris.",
+    category: "women_category",
+    gender: "women_category",
+    price: 99,
+    localFileName: "women6.png",
+  },
+  {
+    name: "Chanel Coco Mademoiselle",
+    description:
+      "A fresh fragrance with jasmine, perfect for the modern woman.",
+    category: "women_category",
+    gender: "women_category",
+    price: 138,
+    localFileName: "women7.png",
+  },
+]);

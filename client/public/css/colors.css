@@ -1,0 +1,165 @@
+
+
+/* THEME CONTROLS FOR THE WEBSITE */
+
+
+/* LOGO AREA */
+.header-section{
+    background-color:#808F82;
+}
+
+/* logo color */
+.brand *{
+    color:#27361F;
+}
+
+/* THE LOGO BETWEEN THE NAMES */
+.brand .logo{
+    color: #808F82; /* doesnt do anything */
+}
+
+/* NAVIGATION BAR */
+.nav-links {
+    background-color:#AFA08C;
+    /* background-color: black; */
+}
+
+.nav-links .links a{
+    color: #EDEDED;
+}
+
+/* when you hover on the links  */
+.header-section .links a:hover , .nav-icons a img:hover {
+    background-color:#27361F;
+}
+
+/* WHEN YOU HOVER ON THE LINKS (THE WORDS) */
+.nav-links .links a:hover{
+    color:#ededed;
+}
+
+/* BACKGROUND FOR ALL */
+
+body{
+    background-color: #ededed;
+}
+
+/* ALL CARD COLOURS */
+.card {
+    background-color: #808F82;
+}
+
+/* category word color, card headings and words */
+
+.categories>div  {
+    color:#27361F;
+}
+
+.card-body > h5, .card-body > p  {
+    /* both look fine */
+    color:#27361F;
+    color: #ededed;
+}
+
+/* card buttons */
+.card-body>a , .add-to-cart>a , 
+.about-hero .text-center button, 
+.hero-btn > a , 
+.single-product .add-to-cart .btn  {
+    
+    background-color: #27361F; /* button colors*/
+    color: white; /* button text color */
+    border: none;
+    
+}
+
+.add-to-cart .price{
+    color: #27361F;
+}
+
+/* hovering over buttons */
+.card-body>a:hover , 
+.add-to-cart>a:hover , 
+.about-hero .text-center button:hover, 
+.hero-btn > a:hover , 
+.single-product .add-to-cart .btn:hover  {
+
+    /* button colors*/
+    background-color:#27361F ;
+    
+    /* button colors*/
+    background-color:#AFA08C ;
+
+    /* word colors */
+    color: #ededed;
+
+
+}
+
+/* clicking on them */
+.card-body>a:active , 
+.add-to-cart>a:active , 
+.about-hero .text-center button:active, 
+.hero-btn > a:active , 
+.single-product .add-to-cart .btn:active  {
+    background-color: #99896F !important; /* button colors*/
+}
+
+
+/* contact us form button details */
+.contact-cards form button{
+    border-radius: 10px;
+    background-color:#27361F;
+    color: #ededed;
+}
+
+/* dropdown and hamburger */
+
+.nav-dropdown .drop-btn {
+    background-color:#808F82;
+    color:#27361F ;
+}
+
+/* the box that drops down in the dropdown */
+.nav-dropdown .dropdown-menu {
+    background-color: #27361F;
+}
+
+/* drop down items border colors top and bottom */
+.nav-dropdown .dropdown-item {
+    border-top: 1px solid #808F82;
+    border-bottom: 1px solid #808F82;
+}
+
+/* above item when you click */
+.nav-dropdown .dropdown-item:active {
+    background-color: #AFA08C;
+    /* -webkit-user-drag: none; */
+}
+
+/* above item when you hover */
+.nav-dropdown .dropdown-item:hover {
+    background-color: #808F82;
+}
+
+/* color of words in drop down */
+.nav-dropdown a{
+    color: #ededed;
+} 
+
+/* above item when you click */
+.nav-dropdown .dropdown-item:active {
+    color:#AFA08C;
+}
+
+
+/* footer */
+.footer-container{
+    background-color:#AFA08C;
+
+}
+
+.footer-container a:hover{
+    background-color:#808F82;
+    border-radius: 4px;
+}
